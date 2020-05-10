@@ -11,6 +11,7 @@ import { Menu1Component } from './menu1/menu1.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
+import { DishdetailComponent } from './dishdetail/dishdetail.component';
 
 
 
@@ -18,7 +19,8 @@ import { MatButtonModule } from '@angular/material/button';
   declarations: [
     AppComponent,
     MenuComponent,
-    Menu1Component
+    Menu1Component,
+    DishdetailComponent
   ],
   imports: [
     BrowserModule,
