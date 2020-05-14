@@ -32,6 +32,13 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { HttpModule } from '@angular/http';
+
+import { HttpClientModule } from '@angular/common/http';
+import { baseURL } from './shared/baseurl';
+
+
+
 
 
 
@@ -71,7 +78,9 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
      MatSelectModule,
     MatSlideToggleModule,
         ReactiveFormsModule,
-            MatProgressSpinnerModule
+            MatProgressSpinnerModule,
+            HttpModule,
+            HttpClientModule
 
     
 
@@ -81,7 +90,9 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
   ],
   providers: [DishService,
   PromotionService,
-  LeaderService],
+  LeaderService,
+   {provide: 'BaseURL', useValue: baseURL}
+   ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
