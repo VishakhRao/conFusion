@@ -16,6 +16,8 @@ import { switchMap } from 'rxjs/operators';
 export class DishdetailComponent implements OnInit {
 
   dish: Dish;
+  errMess: string;
+
   dishIds: number[];
   prev: number;
   next: number;
@@ -52,7 +54,8 @@ export class DishdetailComponent implements OnInit {
 
     this.dishservice.getDishIds().subscribe(dishIds => this.dishIds = dishIds);
     this.route.params.pipe(switchMap((params: Params) => this.dishservice.getDish(+params['id']))) // (+) converts string id to a number
-      .subscribe(dish => { this.dish = dish; this.setPrevNext(parseInt(dish.id)) });
+      .subscribe(dish => { this.dish = dish; this.setPrevNext(parseInt(dish.id)) },
+      errmess => this.errMess = <any>errmess);
   }
 
   setPrevNext(dishId: number) {

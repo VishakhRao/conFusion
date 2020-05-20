@@ -13,6 +13,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { DishdetailComponent } from './dishdetail/dishdetail.component';
 import { DishService } from './services/dish.service';
+import { ProcessHTTPMsgService } from './services/process-httpmsg.service';
+
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { AppRoutingModule } from './app-routing/app-routing.module';
@@ -91,6 +93,7 @@ import { baseURL } from './shared/baseurl';
   providers: [DishService,
   PromotionService,
   LeaderService,
+  ProcessHTTPMsgService,
    {provide: 'BaseURL', useValue: baseURL}
    ],
   bootstrap: [AppComponent]
