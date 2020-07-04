@@ -38,6 +38,7 @@ import { HttpModule } from '@angular/http';
 
 import { HttpClientModule } from '@angular/common/http';
 import { baseURL } from './shared/baseurl';
+import { HighlightDirective } from './directives/highlight.directive';
 
 
 
@@ -60,7 +61,8 @@ import { baseURL } from './shared/baseurl';
     HomeComponent,
     ContactComponent,
     AboutComponent,
-    LoginComponent
+    LoginComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
